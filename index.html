@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phiếu học tập Hóa học 11 – SO₂ và ô nhiễm môi trường</title>
+<style>
+:root{--navy:#15324b;--teal:#087f8c;--mint:#e8f7f4;--gold:#f5b544;--ink:#233446;--muted:#657789;--paper:#fff;--line:#dce7ed;--red:#c43d4b;--green:#18865b}
+*{box-sizing:border-box}body{margin:0;background:#f2f7fa;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.wrap{max-width:920px;margin:auto;padding:16px}
+.hero{background:linear-gradient(135deg,#15324b,#087f8c);color:white;border-radius:22px;padding:24px 20px;text-align:center;box-shadow:0 8px 24px #15324b20}
+.hero .tag{display:inline-block;background:#ffffff20;border:1px solid #ffffff45;padding:5px 12px;border-radius:999px;font-size:.82rem}
+h1{font-size:clamp(1.35rem,5vw,2rem);line-height:1.25;margin:12px 0 8px}
+.hero p{margin:5px 0;color:#e5f7f8}.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.meta span{background:#ffffff18;border-radius:10px;padding:6px 10px;font-size:.9rem}
+.student{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+input[type=text],input[type=number],select{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:white;font:inherit;min-width:0}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0;box-shadow:0 3px 12px #15324b08}
+.section-title{margin:0 0 5px;color:var(--navy);font-size:1.15rem}
+.hint{color:var(--muted);font-size:.92rem;margin:0 0 14px}
+.question{border-top:1px solid #edf2f5;padding:14px 0}
+.question:first-of-type{border-top:0}.qtitle{font-weight:650;margin:0 0 10px}
+.options{display:grid;gap:8px}
+.option{display:flex;align-items:flex-start;gap:10px;border:1px solid #e3ebef;border-radius:12px;padding:10px 12px;cursor:pointer;transition:.15s;background:#fbfdfe}
+.option:hover{border-color:#86c8cc;background:#f2fbfb}
+.option input{margin-top:4px;accent-color:var(--teal);flex:0 0 auto}
+.option span{flex:1}
+.tfgrid{display:grid;grid-template-columns:1fr 100px;gap:8px;align-items:center}
+.tfgrid .statement{padding:10px;border-radius:10px;background:#f7fafc}
+.tfgrid select{padding:9px}
+.short-answer{max-width:260px}
+.matchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.matchbox{border:1px solid var(--line);padding:12px;border-radius:12px;background:#fafdff}
+.matchbox h3{margin:0 0 8px;color:var(--teal);font-size:1rem}
+.match-row{display:grid;grid-template-columns:1fr 90px;gap:8px;align-items:center;margin:9px 0}
+.match-row select{padding:9px}
+.math{font-family:"Cambria Math",Cambria,serif;letter-spacing:.1px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0}
+button{border:0;border-radius:13px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}
+.primary{background:var(--teal);color:white}.secondary{background:#e6eef3;color:var(--navy)}.reset{background:#fff0f1;color:var(--red)}
+button:active{transform:scale(.98)}
+#result{display:none}.score{font-size:1.6rem;font-weight:800;color:var(--teal)}
+.feedback{padding:10px 12px;border-radius:10px;margin:8px 0;font-size:.94rem}
+.correct{background:#e9f8f0;color:#176b48}.incorrect{background:#fff0f1;color:#a52d3b}.explanation{color:#526575;margin:5px 0 0}
+details{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:10px 12px}summary{font-weight:700;cursor:pointer;color:var(--navy)}
+.footer{text-align:center;color:var(--muted);font-size:.82rem;padding:12px}
+@media(max-width:600px){.wrap{padding:10px}.hero{padding:20px 14px;border-radius:18px}.student{grid-template-columns:1fr}.panel{padding:13px}.matchgrid{grid-template-columns:1fr}.tfgrid{grid-template-columns:1fr 92px}.match-row{grid-template-columns:1fr 80px}.option{padding:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <span class="tag">PHIẾU HỌC TẬP TƯƠNG TÁC • HÓA HỌC 11</span>
+  <h1>SULFUR DIOXIDE (SO₂)<br>VÀ Ô NHIỄM MÔI TRƯỜNG</h1>
+  <p>Ôn tập kiến thức • Luyện tập • Kiểm tra trực tuyến</p>
+  <div class="meta"><span>⏱ Thời gian: 45 phút</span><span>📱 Tối ưu điện thoại</span><span>🧪 16 câu / ý</span></div>
+</header>
+
+<div class="student">
+  <input id="studentName" type="text" placeholder="Họ và tên học sinh">
+  <input id="studentClass" type="text" placeholder="Lớp (ví dụ: 11A1)">
+</div>
+
+<section class="panel">
+<h2 class="section-title">PHẦN I. TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN (10 câu)</h2>
+<p class="hint">Chọn một phương án đúng nhất. Phần này 4 điểm (mỗi câu 0,4 điểm).</p>
+<div id="mcq"></div>
+</section>
+
+<section class="panel">
+<h2 class="section-title">PHẦN II. TRẮC NGHIỆM ĐÚNG – SAI (2 câu)</h2>
+<p class="hint">Chọn Đúng hoặc Sai cho từng phát biểu. Phần này 2 điểm (mỗi ý 0,25 điểm).</p>
+<div id="tf"></div>
+</section>
+
+<section class="panel">
+<h2 class="section-title">PHẦN III. TRẢ LỜI NGẮN (3 câu)</h2>
+<p class="hint">Nhập đáp án ngắn. Phần này 3 điểm (mỗi câu 1 điểm). Câu 3 nhập giá trị khối lượng theo gam.</p>
+<div id="short"></div>
+</section>
+
+<section class="panel">
+<h2 class="section-title">PHẦN IV. NỐI CỘT (1 câu)</h2>
+<p class="hint">Chọn thông tin ở Cột B tương ứng với từng phương trình ở Cột A. Phần này 1 điểm (mỗi cặp đúng 0,25 điểm).</p>
+<div id="matching"></div>
+</section>
+
+<div class="actions">
+<button class="primary" onclick="submitQuiz()">📊 Nộp bài & xem kết quả</button>
+<button class="secondary" onclick="window.print()">🖨 In phiếu</button>
+<button class="reset" onclick="resetQuiz()">↻ Làm lại</button>
+</div>
+
+<section class="panel" id="result">
+<h2 class="section-title">KẾT QUẢ BÀI LÀM</h2>
+<div id="scoreLine" class="score"></div>
+<div id="summary"></div>
+<details open><summary>Đáp án và hướng dẫn giải</summary><div id="answerKey"></div></details>
+</section>
+<div class="footer">Phiếu học tập số • Hóa học 11 • Chủ đề SO₂ và ô nhiễm môi trường</div>
+</div>
+<script>
+const mcqData=[
+{q:"Ở điều kiện thường, sulfur dioxide (SO₂) có đặc điểm tính chất vật lý nào sau đây?",o:["Khí không màu, không mùi, nhẹ hơn không khí.","Khí màu vàng nhạt, mùi hắc, ít tan trong nước.","Khí không màu, mùi hắc, nặng hơn không khí, tan nhiều trong nước.","Chất lỏng không màu, mùi thơm nhẹ, dễ bay hơi."],a:2,e:"SO₂ là khí không màu, mùi hắc, nặng hơn không khí và tan nhiều trong nước (xấp xỉ 40 L SO₂/L nước ở 20°C)."},
+{q:"SO₂ thể hiện tính oxide acid khi tác dụng với chất nào sau đây ở điều kiện thích hợp?",o:["Dung dịch Ca(OH)₂.","Dung dịch H₂S.","Dung dịch Br₂.","Khí O₂."],a:0,e:"SO₂ tác dụng với base tạo muối sulfite và nước: SO₂ + Ca(OH)₂ → CaSO₃↓ + H₂O."},
+{q:"Cho phản ứng: SO₂ + 2H₂S → 3S + 2H₂O. Trong phản ứng này, SO₂ đóng vai trò là",o:["chất khử.","chất oxi hóa.","vừa là chất oxi hóa, vừa là chất khử.","môi trường acid."],a:1,e:"S trong SO₂ giảm số oxi hóa từ +4 xuống 0, nên SO₂ là chất oxi hóa."},
+{q:"Hiện tượng khi dẫn từ từ SO₂ vào dung dịch nước bromine (Br₂) là",o:["xuất hiện kết tủa màu vàng tươi.","dung dịch nước bromine bị mất màu.","có khí màu nâu đỏ thoát ra.","không có hiện tượng gì xảy ra."],a:1,e:"SO₂ khử Br₂ thành HBr, còn S(+4) bị oxi hóa lên S(+6): SO₂ + Br₂ + 2H₂O → H₂SO₄ + 2HBr."},
+{q:"Ứng dụng công nghiệp quan trọng của SO₂ là",o:["làm chất bảo quản thực phẩm khô.","làm chất trung gian để sản xuất sulfuric acid (H₂SO₄).","làm nhiên liệu đốt cháy trong lò hơi.","làm khí duy trì sự cháy."],a:1,e:"SO₂ là nguyên liệu trung gian chủ yếu trong quy trình sản xuất H₂SO₄."},
+{q:"Nguồn phát thải SO₂ nhân tạo chính gây ô nhiễm không khí là",o:["quá trình quang hợp của cây xanh.","quá trình hô hấp của động vật.","đốt nhiên liệu hóa thạch và đốt quặng sulfide.","sự bay hơi của nước biển."],a:2,e:"Đốt than, dầu và nung/đốt quặng sulfide trong công nghiệp phát thải SO₂ đáng kể."},
+{q:"Nước mưa thông thường có pH khoảng 5,6. Mưa được gọi là mưa acid khi",o:["pH > 7,0.","pH = 7,0.","pH < 5,6.","5,6 ≤ pH ≤ 6,8."],a:2,e:"Theo quy ước phổ biến, mưa có pH thấp hơn 5,6 được xem là mưa acid."},
+{q:"Trong khí quyển, phản ứng oxi hóa SO₂ thành SO₃ có thể được biểu diễn bằng phương trình",o:["SO₂ + NO₂ → SO₃ + NO.","SO₂ + H₂O → H₂SO₃.","SO₂ + C → S + CO₂.","2SO₂ + CO₂ → 2SO₃ + C."],a:0,e:"NO₂ có thể oxi hóa SO₂ thành SO₃ và bị khử thành NO; SO₃ tiếp tục tạo acid trong khí quyển."},
+{q:"Cân bằng: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), ΔᵣH°₂₉₈ = −198 kJ. Biện pháp phù hợp để tăng hiệu suất tạo SO₃ là",o:["tăng nhiệt độ hệ phản ứng.","giảm áp suất chung của hệ phản ứng.","tăng áp suất và giảm nhiệt độ đến mức thích hợp, dùng xúc tác V₂O₅.","giảm nồng độ SO₂ và O₂."],a:2,e:"Phản ứng tỏa nhiệt và số mol khí giảm từ 3 xuống 2; tăng áp suất, giảm nhiệt độ thuận lợi cho chiều thuận. Xúc tác giúp tăng tốc độ, không làm dịch chuyển cân bằng."},
+{q:"Trong sản xuất mây tre đan hoặc khử màu dịch đường, SO₂ được ứng dụng nhờ",o:["tính duy trì sự cháy.","khả năng tẩy trắng và chống nấm mốc.","khả năng hòa tan kim loại kiềm.","tính làm khô các chất khí."],a:1,e:"SO₂ có tính tẩy màu và tác dụng ức chế vi sinh vật; việc sử dụng phải tuân thủ quy định an toàn."}
+];
+const tfData=[
+{q:"Đánh giá về tính chất hóa học và vai trò môi trường của SO₂:",items:[
+["SO₂ là oxide acid, hòa tan trong nước tạo dung dịch acid yếu H₂SO₃.",true,"SO₂ hòa tan trong nước tạo hệ acid sulfurous (thường biểu diễn H₂SO₃)."],
+["Trong SO₂, sulfur có số oxi hóa +4 nên SO₂ có thể thể hiện cả tính oxi hóa và tính khử.",true,"S(+4) là mức oxi hóa trung gian; có thể bị oxi hóa lên +6 hoặc bị khử xuống thấp hơn."],
+["SO₂ là tác nhân duy nhất gây ra hiện tượng mưa acid trong tự nhiên.",false,"NOₓ cũng góp phần đáng kể vào sự hình thành mưa acid."],
+["Phản ứng SO₂ + 2H₂S → 3S + 2H₂O có thể được ứng dụng loại bỏ H₂S và thu hồi sulfur.",true,"Phản ứng chuyển H₂S độc hại thành sulfur đơn chất."]
+]},
+{q:"Hai thí nghiệm với SO₂:",items:[
+["Sục SO₂ vào nước Br₂ làm dung dịch mất màu, chứng tỏ SO₂ thể hiện tính khử.",true,"S(+4) trong SO₂ tăng lên +6; Br₂ bị khử thành Br⁻."],
+["Phương trình: SO₂ + Br₂ + 2H₂O → H₂SO₄ + 2HBr.",true,"Phương trình đã cân bằng."],
+["Đốt cháy quặng pyrite (FeS₂) trong không khí thu được khí X là H₂S.",false,"Khí tạo ra là SO₂: 4FeS₂ + 11O₂ → 2Fe₂O₃ + 8SO₂."],
+["Dẫn khí X vào Ca(OH)₂ dư thu được kết tủa trắng CaSO₃.",true,"SO₂ phản ứng với Ca(OH)₂ tạo CaSO₃ kết tủa trắng."]
+]}
+];
+const shortData=[
+{q:"Cho dãy khí CO₂, SO₂, NO₂, O₂, N₂. Có bao nhiêu chất khí trong dãy vừa có tính oxi hóa, vừa có tính khử?",a:["2"],e:"SO₂ (S +4) và NO₂ (N +4) có thể thể hiện cả hai tính chất."},
+{q:"Ở 20°C, 1 lít nước có thể hòa tan tối đa khoảng bao nhiêu lít khí SO₂? (Nhập số)",a:["40"],e:"Theo dữ kiện thường dùng trong SGK: xấp xỉ 40 lít SO₂ trong 1 lít nước ở 20°C."},
+{q:"Hấp thụ hoàn toàn 4,958 L SO₂ (25°C, 1 bar; Vm = 24,79 L/mol) vào Ca(OH)₂ dư. Tính khối lượng CaSO₃ kết tủa (g).",a:["24","24.0","24,0"],e:"nSO₂ = 4,958/24,79 = 0,2 mol. Ca(OH)₂ dư nên nCaSO₃ = 0,2 mol; M = 120 g/mol; m = 24 g."}
+];
+const matchingData=[
+["SO₂ + Ca(OH)₂ → CaSO₃↓ + H₂O","B"],
+["SO₂ + Br₂ + 2H₂O → H₂SO₄ + 2HBr","D"],
+["SO₂ + 2H₂S → 3S↓ + 2H₂O","A"],
+["SO₂ + NO₂ → SO₃ + NO","C"]
+];
+const matchOptions=[
+["A","SO₂ thể hiện tính oxi hóa, sinh ra sulfur màu vàng."],
+["B","SO₂ thể hiện tính oxide acid, tạo kết tủa trắng."],
+["C","Giai đoạn trung gian giải thích sự hình thành mưa acid."],
+["D","SO₂ thể hiện tính khử, làm mất màu nước bromine."]
+];
+function el(tag,cls,html){const x=document.createElement(tag);if(cls)x.className=cls;if(html!==undefined)x.innerHTML=html;return x}
+function render(){
+const mc=document.getElementById("mcq");
+mcqData.forEach((q,i)=>{let d=el("div","question");d.innerHTML=`<p class="qtitle">Câu ${i+1}. ${q.q}</p><div class="options">${q.o.map((o,j)=>`<label class="option"><input type="radio" name="mc${i}" value="${j}"><span><b>${"ABCD"[j]}.</b> ${o}</span></label>`).join("")}</div>`;mc.append(d)});
+const tf=document.getElementById("tf");
+tfData.forEach((q,i)=>{let d=el("div","question");d.innerHTML=`<p class="qtitle">Câu ${i+1}. ${q.q}</p><div>${q.items.map((it,j)=>`<div class="tfgrid"><div class="statement">${"abcd"[j]}) ${it[0]}</div><select name="tf${i}_${j}" aria-label="Chọn đúng sai"><option value="">Chọn…</option><option value="true">Đúng</option><option value="false">Sai</option></select></div>`).join("")}</div>`;tf.append(d)});
+const sh=document.getElementById("short");
+shortData.forEach((q,i)=>{let d=el("div","question");d.innerHTML=`<p class="qtitle">Câu ${i+1}. ${q.q}</p><input class="short-answer" type="text" inputmode="decimal" name="sh${i}" placeholder="Nhập đáp án…">`;sh.append(d)});
+const mt=document.getElementById("matching");
+mt.innerHTML=`<div class="matchgrid"><div class="matchbox"><h3>Cột A – Phương trình / thí nghiệm</h3>${matchingData.map((x,i)=>`<p>(${i+1}) <span class="math">${x[0]}</span></p>`).join("")}</div><div class="matchbox"><h3>Cột B – Tính chất / vai trò / hiện tượng</h3>${matchOptions.map(x=>`<p><b>(${x[0]})</b> ${x[1]}</p>`).join("")}</div></div><div style="margin-top:12px">${matchingData.map((x,i)=>`<div class="match-row"><label for="m${i}">Ghép (${i+1}) với</label><select id="m${i}" name="m${i}"><option value="">Chọn…</option>${["A","B","C","D"].map(v=>`<option value="${v}">${v}</option>`).join("")}</select></div>`).join("")}`;
+}
+function normalize(s){return (s||"").trim().replace(",",".").replace(/\s+/g,"").toLowerCase()}
+function submitQuiz(){
+let score=0,total=10,details=[];
+mcqData.forEach((q,i)=>{let v=document.querySelector(`input[name="mc${i}"]:checked`);let ok=v&&Number(v.value)===q.a;if(ok)score+=0.4;details.push({title:`Phần I – Câu ${i+1}`,ok,points:0.4,answer:"ABCD"[q.a],ex:q.e,chosen:v? "ABCD"[Number(v.value)]:"Chưa chọn"})});
+tfData.forEach((q,i)=>q.items.forEach((it,j)=>{let v=document.querySelector(`select[name="tf${i}_${j}"]`).value;let ok=v!==""&&(v==="true")===it[1];if(ok)score+=0.25;details.push({title:`Phần II – Câu ${i+1}${"abcd"[j]}`,ok,points:0.25,answer:it[1]?"Đúng":"Sai",ex:it[2],chosen:v===""?"Chưa chọn":v==="true"?"Đúng":"Sai"})}));
+shortData.forEach((q,i)=>{let v=document.querySelector(`input[name="sh${i}"]`).value;let ok=q.a.includes(normalize(v));if(ok)score+=1;details.push({title:`Phần III – Câu ${i+1}`,ok,points:1,answer:q.a[0],ex:q.e,chosen:v||"Chưa nhập"})});
+matchingData.forEach((q,i)=>{let v=document.querySelector(`select[name="m${i}"]`).value;let ok=v===q[1];if(ok)score+=0.25;details.push({title:`Phần IV – Ghép (${i+1})`,ok,points:0.25,answer:q[1],ex:matchOptions.find(x=>x[0]===q[1])[1],chosen:v||"Chưa chọn"})});
+const result=document.getElementById("result");result.style.display="block";
+document.getElementById("scoreLine").textContent=`${score.toFixed(2).replace(/\\.?0+$/,"")} / ${total} điểm`;
+const name=document.getElementById("studentName").value.trim(),cl=document.getElementById("studentClass").value.trim();
+document.getElementById("summary").innerHTML=`<p><b>Học sinh:</b> ${escapeHTML(name||"Chưa nhập")} &nbsp; <b>Lớp:</b> ${escapeHTML(cl||"Chưa nhập")}</p><p>${score/total>=.8?"Rất tốt! Hãy tiếp tục phát huy.":score/total>=.5?"Bạn đã nắm được một phần kiến thức. Hãy xem lại các câu chưa chính xác.":"Hãy ôn tập kiến thức và thử làm lại nhé."}</p>`;
+document.getElementById("answerKey").innerHTML=details.map(d=>`<div class="feedback ${d.ok?"correct":"incorrect"}"><b>${d.title}: ${d.ok?"Đúng":"Chưa đúng"}</b> • Điểm: ${d.ok?d.points:0} • Đáp án: <b>${d.answer}</b> • Bạn chọn: ${escapeHTML(d.chosen)}<p class="explanation">${d.ex}</p></div>`).join("");
+result.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function resetQuiz(){if(confirm("Bạn muốn xóa toàn bộ câu trả lời để làm lại?")){document.querySelectorAll("input[type=radio],select").forEach(x=>x.value="");document.querySelectorAll("input[type=text]").forEach(x=>x.value="");document.getElementById("result").style.display="none";window.scrollTo({top:0,behavior:"smooth"})}}
+render();
+</script>
+</body>
+</html>
